@@ -6,7 +6,7 @@ import useData from '../../../../hooks/useData';
 const Service = () => {
     const [service, setService] = useData()
     return (
-        <div>
+        <div id='services'>
             <Container>
                 <h1 className='text-center text-primary my-5 pt-5'>Our Services</h1>
                 <Row className='g-4'>

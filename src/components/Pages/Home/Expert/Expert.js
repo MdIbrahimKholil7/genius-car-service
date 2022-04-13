@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import expert1 from '../../../../images/experts/expert-1.jpg'
 import expert2 from '../../../../images/experts/expert-2.jpg'
 import expert3 from '../../../../images/experts/expert-3.jpg'
@@ -15,9 +16,9 @@ const experts = [
     { name: 'Steve', img: expert6, id: 6 },
 ]
 const Expert = () => {
-
+    const navigate=useNavigate()
     return (
-        <div>
+        <div id='experts'>
             <Container>
                 <h1 className='text-center my-5 pt-4 text-primary'>Our Experts</h1>
                 <Row className='g-4'>
@@ -31,7 +32,7 @@ const Expert = () => {
                                         This is a longer card with supporting text below as a natural
                                         lead-in to additional content. This content is a little bit longer.
                                     </Card.Text>
-                                    <Button className=' btn text-white'>Book Now</Button>
+                                    <Button onClick={()=>navigate(`/servicedetails/${expert.id}}`)} className=' btn text-white'>Book Now</Button>
                                 </Card.Body>
                             </Card>
                         </Col>)
