@@ -8,7 +8,7 @@ const Service = () => {
     return (
         <div>
             <Container>
-                <h1 className='text-center text-primary my-5 py-5'>Our Services</h1>
+                <h1 className='text-center text-primary my-5 pt-5'>Our Services</h1>
                 <Row className='g-4'>
                     {
                         service.map(data => <Col key={data.id} md={4}>
@@ -20,7 +20,7 @@ const Service = () => {
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <Button className='fs-6' variant="primary">Book {data.name}</Button>
                                 </Card.Body>
                             </Card>
                         </Col>)
